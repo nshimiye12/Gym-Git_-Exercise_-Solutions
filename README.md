@@ -216,3 +216,47 @@ PS C:\Users\Hp\Desktop\Exercise> git reset --hard
 HEAD is now at 1c675c3 setup the home and about page
 PS C:\Users\Hp\Desktop\Exercise>
 ```
+# bundle 2 Exercise 1
+``` PS C:\Users\Hp\Desktop\Exercise> git checkout ft/bundle-2
+error: pathspec 'ft/bundle-2' did not match any file(s) known to git
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b  ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)      
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Hp\Desktop\Exercise> git add .\service.html
+PS C:\Users\Hp\Desktop\Exercise> git commit -m " create the service page"
+[ft/bundle-2 c42ce1c]  create the service page
+ 1 file changed, 9 insertions(+)
+ create mode 100644 service.html
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 369 bytes | 369.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting 
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+```
