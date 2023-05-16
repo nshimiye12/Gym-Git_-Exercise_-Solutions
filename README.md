@@ -201,4 +201,18 @@ PS C:\Users\Hp\Desktop\Exercise> git commit -m "setup the home and about page"
  create mode 100644 Home.html
  create mode 100644 about.html
 PS C:\Users\Hp\Desktop\Exercise> 
+PS C:\Users\Hp\Desktop\Exercise> git stash list
+stash@{0}: WIP on dev: 4aebf05 init project
+PS C:\Users\Hp\Desktop\Exercise> git stash pop
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped refs/stash@{0} (a85d59913470d14fe1658ebd918bc519218416a0)
+PS C:\Users\Hp\Desktop\Exercise> git reset --hard
+HEAD is now at 1c675c3 setup the home and about page
+PS C:\Users\Hp\Desktop\Exercise>
 ```
