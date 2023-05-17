@@ -260,3 +260,310 @@ To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+
+# Bundle 3 Exercise 1 
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Hp\Desktop\Exercise> git add '.\team .html'
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team .html
+
+PS C:\Users\Hp\Desktop\Exercise> git commit -m " feature add team page "
+[ft/team-page aa751fa]  feature add team page
+ 1 file changed, 8 insertions(+)
+ create mode 100644 team .html
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\Hp\Desktop\Exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/teampage
+error: pathspec 'ft/teampage' did not match any file(s) known to git
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit aa751fa10707c3b9cf957a0876c8d36b19e3bdaa (HEAD -> ft/team-page,
+ origin/ft/team-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+commit 24f2328cc0c81936cfc3ffa743436cc974553333 (origin/main, main, ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:53:13 2023 +0200
+
+    exercise2 bundle 2
+
+commit 5403b8c03933947cecf5a4bba2cc6b61b5565798
+Author: emery v <valery.emery02@gmail.com>
+commit aa751fa10707c3b9cf957a0876c8d36b19e3bdaa (HEAD -> ft/team-page, origin/ft/team-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+commit 24f2328cc0c81936cfc3ffa743436cc974553333 (origin/main, main, ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:53:13 2023 +0200
+
+    exercise2 bundle 2
+
+commit 5403b8c03933947cecf5a4bba2cc6b61b5565798
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:23:57 2023 +0200
+
+     old features
+
+commit 9b283e90c42182c21d09a159260f387b9c0a11c9
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 00:53:43 2023 +0200
+
+     new code added for Exercise 1 bundle 2
+
+commit 8ac255e5fd32b27abbba66096770bd568f0b980a
+Author: emery v <valery.emery02@gmail.com>
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS C:\Users\Hp\Desktop\Exercise> git cherry-pick
+usage: git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]
+                       [-S[<keyid>]] <commit>...
+   or: git cherry-pick (--continue | --skip | --abort | --quit)       
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence       
+    --abort               cancel revert or cherry-pick sequence       
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    -x                    append commit name
+    --ff                  allow fast-forward
+    --allow-empty         preserve initially empty commits
+    --allow-empty-message
+                          allow commits with empty messages
+    --keep-redundant-commits
+                          keep redundant, empty commits
+
+PS C:\Users\Hp\Desktop\Exercise> git cherry-pick aa751fa10707c3b9cf957a0876c8d36b19e3bdaa
+[ft/contact-page da88895]  feature add team page
+ Date: Wed May 17 10:30:25 2023 +0200
+ 1 file changed, 8 insertions(+)
+ create mode 100644 team .html
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit da888951574177df87ffc0c33af26dfde5b0780e (HEAD -> ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+commit 24f2328cc0c81936cfc3ffa743436cc974553333 (origin/main, main)   
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:53:13 2023 +0200
+
+    exercise2 bundle 2
+
+commit 5403b8c03933947cecf5a4bba2cc6b61b5565798
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:23:57 2023 +0200
+
+     old features
+
+commit 9b283e90c42182c21d09a159260f387b9c0a11c9
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 00:53:43 2023 +0200
+
+     new code added for Exercise 1 bundle 2
+
+commit 8ac255e5fd32b27abbba66096770bd568f0b980a
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 00:47:00 2023 +0200
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)      
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Hp\Desktop\Exercise> git add .\contact.html
+PS C:\Users\Hp\Desktop\Exercise> git commit -m " feature: add contact page"
+[ft/contact-page dc0c08d]  feature: add contact page
+ 1 file changed, 8 insertions(+)
+ create mode 100644 contact.html
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 665 bytes | 166.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.  
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\Hp\Desktop\Exercise> git status   
+On branch ft/contact-page
+Your branch is up to date with 'origin/ft/contact-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/faq-page
+error: pathspec 'ft/faq-page' did not match any file(s) known to git
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b  ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\Hp\Desktop\Exercise> git add -all
+error: did you mean `--all` (with two dashes)?
+PS C:\Users\Hp\Desktop\Exercise> git add --all
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "feature :add FAQ-page"
+
+[ft/faq-page 36c7ef1] feature :add FAQ-page
+ 1 file changed, 8 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 179.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting 
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit 36c7ef15eabf42493939e6020555449de582f081 (HEAD -> ft/faq-page, origin/ft/faq-page)
+Revert " feature add team page"
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:50:50 2023 +0200
+
+    feature :add FAQ-page
+
+commit dc0c08d0e4850b18239b96def8de8ea0edc0c1e9 (origin/ft/contact-page, ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+     feature: add contact page
+
+commit da888951574177df87ffc0c33af26dfde5b0780e
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+commit 24f2328cc0c81936cfc3ffa743436cc974553333 (origin/main, main)   
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 01:53:13 2023 +0200
+
+ ```
+    # exercise2 bundle 2
+
+commit 5403b8c03933947cecf5a4bba2cc6b61b5565798
+Author: emery v <valery.emery02@gmail.com>
+PS C:\Users\Hp\Desktop\Exercise> git revert da888951574177df87ffc0c33af26dfde5b0780e
+[ft/faq-page 460dce8] Revert " feature add team page"
+ 1 file changed, 8 deletions(-)
+ delete mode 100644 team .html
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit 460dce8d1ae5127eb60201e457631968787f2bd2 (HEAD -> ft/faq-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:54:08 2023 +0200
+
+    Revert " feature add team page"
+
+    This reverts commit da888951574177df87ffc0c33af26dfde5b0780e.     
+
+commit 36c7ef15eabf42493939e6020555449de582f081 (origin/ft/faq-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:50:50 2023 +0200
+
+    feature :add FAQ-page
+
+commit dc0c08d0e4850b18239b96def8de8ea0edc0c1e9 (origin/ft/contact-page, ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+     feature: add contact page
+
+commit da888951574177df87ffc0c33af26dfde5b0780e
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+commit 24f2328cc0c81936cfc3ffa743436cc974553333 (origin/main, main)   
+PS C:\Users\Hp\Desktop\Exercise> git push  
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 278 bytes | 278.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
+   36c7ef1..460dce8  ft/faq-page -> ft/faq-page
+PS C:\Users\Hp\Desktop\Exercise> 
+
+```
