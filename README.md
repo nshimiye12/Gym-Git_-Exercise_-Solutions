@@ -567,3 +567,165 @@ To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
 PS C:\Users\Hp\Desktop\Exercise> 
 
 ```
+  ```
+  
+  # Bundle 3 exercise 2 PS C:\Users\Hp\Desktop\Exercise> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b ft/home-page-redesign
+
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\Hp\Desktop\Exercise>
+PS C:\Users\Hp\Desktop\Exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Hp\Desktop\Exercise> git add --all
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "feature: add homepage content"
+[main d944b04] feature: add homepage content
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Hp\Desktop\Exercise> git push 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 179.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects. 
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
+   ed1baf9..d944b04  main -> main
+PS C:\Users\Hp\Desktop\Exercise> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit 460dce8d1ae5127eb60201e457631968787f2bd2 (HEAD -> ft/home-page-redesign, origin/ft/faq-page, ft/faq-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:54:08 2023 +0200
+
+    Revert " feature add team page"
+
+    This reverts commit da888951574177df87ffc0c33af26dfde5b0780e.     
+
+commit 36c7ef15eabf42493939e6020555449de582f081
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:50:50 2023 +0200
+
+    feature :add FAQ-page
+
+commit dc0c08d0e4850b18239b96def8de8ea0edc0c1e9 (origin/ft/contact-page, ft/contact-page)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+     feature: add contact page
+
+commit da888951574177df87ffc0c33af26dfde5b0780e
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+PS C:\Users\Hp\Desktop\Exercise> git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> ft/home-page-redesign
+
+PS C:\Users\Hp\Desktop\Exercise> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.    
+PS C:\Users\Hp\Desktop\Exercise> git log
+commit d2418c926fe33992622527d8b99c3081669e7386 (HEAD -> ft/home-page-redesign)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:54:08 2023 +0200
+
+    Revert " feature add team page"
+
+    This reverts commit da888951574177df87ffc0c33af26dfde5b0780e.     
+
+commit 5f6808f22cfecc1fed23c9fccb14b90c0b5b8f3b
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:50:50 2023 +0200
+
+    feature :add FAQ-page
+
+commit 651619de9e003955c3928fc044f6c59f024f019c
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+     feature: add contact page
+
+commit ce1aaa7874ebfe560e7db89956e8463587358cbb
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+PS C:\Users\Hp\Desktop\Exercise> git log 
+commit d2418c926fe33992622527d8b99c3081669e7386 (HEAD -> ft/home-page-redesign)
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:54:08 2023 +0200
+
+    Revert " feature add team page"
+
+    This reverts commit da888951574177df87ffc0c33af26dfde5b0780e.     
+
+commit 5f6808f22cfecc1fed23c9fccb14b90c0b5b8f3b
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:50:50 2023 +0200
+
+    feature :add FAQ-page
+
+commit 651619de9e003955c3928fc044f6c59f024f019c
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+     feature: add contact page
+
+commit ce1aaa7874ebfe560e7db89956e8463587358cbb
+Author: emery v <valery.emery02@gmail.com>
+Date:   Wed May 17 10:30:25 2023 +0200
+
+     feature add team page
+
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")     
+PS C:\Users\Hp\Desktop\Exercise> git add .\Home.html   
+PS C:\Users\Hp\Desktop\Exercise> git commit -m " feature: added list to home file "
+[ft/home-page-redesign 27b2f84]  feature: added list to home file
+ 1 file changed, 4 insertions(+)
+PS C:\Users\Hp\Desktop\Exercise> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.50 KiB | 383.00 KiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects. 
+remote: 
+ feature: added list to home file
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign   
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/home-page-redesign
+Your branch is up to date with 'origin/ft/home-page-redesign'.
+```
