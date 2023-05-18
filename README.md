@@ -567,9 +567,7 @@ To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
 PS C:\Users\Hp\Desktop\Exercise> 
 
 ```
-  ```
-  
-  # Bundle 3 exercise 2 PS C:\Users\Hp\Desktop\Exercise> git checkout ft/faq-page
+# Bundle 3 exercise 2 PS C:\Users\Hp\Desktop\Exercise> git checkout ft/faq-page
 Switched to branch 'ft/faq-page'
 Your branch is up to date with 'origin/ft/faq-page'.
 PS C:\Users\Hp\Desktop\Exercise> git checkout -b ft/home-page-redesign
@@ -728,4 +726,104 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 PS C:\Users\Hp\Desktop\Exercise> git status
 On branch ft/home-page-redesign
 Your branch is up to date with 'origin/ft/home-page-redesign'.
+```
+```
+# BUndle 4 exercise 1
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git remote add git-copy github.com/nshimiye12/Git-repo-2.git
+PS C:\Users\Hp\Desktop\Exercise> git remote
+git-copy
+origin
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Hp\Desktop\Exercise> git add .\Home.html 
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "feature added on home page"
+[main 88880b2] feature added on home page
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Hp\Desktop\Exercise> git push origin
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Hp\Desktop\Exercise> git pull origin main
+>>
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.76 KiB | 150.00 KiB/s, done.
+From https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions
+ * branch            main       -> FETCH_HEAD
+   d944b04..a3e30a3  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 163 insertions(+), 1 deletion(-)
+PS C:\Users\Hp\Desktop\Exercise> git add .\Home.html 
+PS C:\Users\Hp\Desktop\Exercise> git commit -m git commit -m "feature added on home page"
+>>
+error: pathspec 'commit' did not match any file(s) known to git
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git push origin
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 655 bytes | 655.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects. 
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
+   a3e30a3..2b5286c  main -> main
+PS C:\Users\Hp\Desktop\Exercise> git push git-copy
+fatal: 'github.com/nshimiye12/Git-repo-2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Hp\Desktop\Exercise> git remote -v
+git-copy        github.com/nshimiye12/Git-repo-2.git (fetch)
+git-copy        github.com/nshimiye12/Git-repo-2.git (push)
+origin  https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git (fetch)
+origin  https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git (push)
+PS C:\Users\Hp\Desktop\Exercise> git push git-copy
+fatal: 'github.com/nshimiye12/Git-repo-2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Hp\Desktop\Exercise> git remote remove git-copy
+>>
+PS C:\Users\Hp\Desktop\Exercise> git remote add git-copy https://github.com/nshimiye12/Git-repo-2.git
+PS C:\Users\Hp\Desktop\Exercise> git push git-copy
+>>
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (40/40), 8.22 KiB | 1.64 MiB/s, done.
+Total 40 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/nshimiye12/Git-repo-2.git
+ * [new branch]      main -> main
+PS C:\Users\Hp\Desktop\Exercise> 
 ```
