@@ -827,3 +827,156 @@ To https://github.com/nshimiye12/Git-repo-2.git
  * [new branch]      main -> main
 PS C:\Users\Hp\Desktop\Exercise> 
 ```
+```
+# Bundle 4 exercise 2
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/footer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Hp\Desktop\Exercise> git add .\footer.html
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "feature: added footer"
+[ft/footer d7bf69a] feature: added footer
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\Hp\Desktop\Exercise> git status 
+On branch ft/footer
+nothing to commit, working tree clean
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")     
+PS C:\Users\Hp\Desktop\Exercise> git add .\footer.html
+PS C:\Users\Hp\Desktop\Exercise> git commit- m "added more feature on footer"
+git: 'commit-' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "added more feature on footer" 
+[ft/footer 1a2a5cc] added more feature on footer
+ 1 file changed, 6 insertions(+)
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise> git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 712 bytes | 356.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.  
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:  
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git     
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\Hp\Desktop\Exercise> git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Hp\Desktop\Exercise> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\Hp\Desktop\Exercise> git merge --sqwash ft/footer
+error: unknown option `sqwash'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge     
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible       
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target       
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge      
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+PS C:\Users\Hp\Desktop\Exercise> git merge --squash ft/footer
+Updating 2836112..1a2a5cc
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\Hp\Desktop\Exercise> git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+PS C:\Users\Hp\Desktop\Exercise> git commit -m "footer changes squashing"
+[ft/squashing 46ee49d] footer changes squashing
+ 1 file changed, 22 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\Hp\Desktop\Exercise> git push 
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use        
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking     
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Hp\Desktop\Exercise>  git push  origin ft/squashing       
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 456 bytes | 456.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/nshimiye12/Gym-Git_-Exercise_-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\Hp\Desktop\Exercise> 
+```
